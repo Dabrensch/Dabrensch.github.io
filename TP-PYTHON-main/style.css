@@ -1,19 +1,8 @@
+
 *{
     padding: 0px;
     margin: 0px;
 }
-/*
-.jm-loadingpage {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 999999999;
-    background: url(Gif/usada-pekora.gif) center no-repeat #fff;
-}
-*/
-
 
 .miniImgs{
     height: 100px;
@@ -93,7 +82,7 @@ nav{
     color: rgb(14, 14, 59);
     --s: 0.1em;   /* the thickness of the line */
      --c: #623307; /* the color */  
-    color: #0000;
+    color: rgba(255, 0, 0, 0);
     padding-bottom: var(--s);
     background: 
         linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
@@ -381,7 +370,7 @@ h1{
 #mainContacto{
     justify-content:space-around ;
     align-items: center;
-    height: 600px;
+    height: 650px;
     padding-top: 30px;
     background-color: #eaccad;
 }
@@ -406,6 +395,10 @@ h1{
 .divContacto{
     background-color: #6d3c11;
     padding: 10%;
+}
+
+.divContacto p{
+    font-size: 20px;
 }
 
 .formContacto form div{
@@ -482,4 +475,74 @@ a{
     text-decoration: none;
 }
 
-/**d3a579
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    p{
+        font-size: 15.5px;
+    }
+
+    nav, header{
+        height: 110px;
+    }
+    
+    .iconoInicio{
+        width: 80px;
+        margin-left: 32px;
+    }
+
+    .aMenu{
+        font-size: 35px;
+    }
+
+
+    /********MAIN-CONTACTO********/
+    
+    .formContacto label{
+        font-size: 17px;
+    }
+
+    .divContacto p{
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    p{
+        font-size: 8px;
+    }
+
+    nav, header{
+        height: 80px;
+    }
+    
+    .iconoInicio{
+        width: 60px;
+        margin-left: 12px;
+    }
+
+    .imgCarrito{
+        width: 60px;
+    }
+
+    .imgheader{
+        width: 30px;
+        height: 27px;
+    }
+
+    .aMenu{
+        font-size: 15px;
+    }
+
+
+    /********MAIN-CONTACTO********/
+
+    .formContacto label{
+        font-size: 17px;
+    }
+
+    .divContacto p{
+        font-size: 17px;
+    }
+
+}
