@@ -497,13 +497,10 @@ a{
 
     /********MAIN-CONTACTO********/
     
-    .formContacto label{
+    .formContacto label, .divContacto p{
         font-size: 17px;
     }
 
-    .divContacto p{
-        font-size: 17px;
-    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -537,12 +534,36 @@ a{
 
     /********MAIN-CONTACTO********/
 
-    .formContacto label{
-        font-size: 17px;
+    #mainContacto{
+        height: 750px;
     }
 
-    .divContacto p{
-        font-size: 17px;
+    #mainContacto h3{
+        font-size: 27px;
     }
-
+    
+    .containerContacto{
+        display: block;
+    }
+    
+    .formContacto form{
+        display: block;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .divContacto{
+        background-color: #6d3c11;
+        padding: 5%;
+    }
+    
+    .formContacto label, .divContacto p, .formContacto div input,
+    .formContacto textarea, #error{
+        font-size: 13px;
+    }
+    
+    .formContacto form div{
+        padding: 1px;
+    }
+    
 }
