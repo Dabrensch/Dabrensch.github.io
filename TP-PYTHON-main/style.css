@@ -92,6 +92,7 @@ header{
 
 .divHeader{
     text-align: center;
+    width: 310px;
 }
 
 .imgheader{
@@ -110,20 +111,25 @@ h2{
     width:auto ;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items:center ;
-    height: 1800px;
-    background-color:#ffedba;
+    height: 800px;
+    background-color:#eaccad;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #divPresentacion{
-    margin-left: 100px;
     height: 900px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+}
+
+#divCentradoIndex{
+    display: grid;
+    grid-template-columns: repeat(2,255px);
+    column-gap: 50px;
+    margin: 50px;
 }
 
 #imgCarrusel{
@@ -135,7 +141,10 @@ h2{
     border-radius: 3px;
     display: flex;
     justify-content: space-between;
-    width: 800px;}
+    width: 800px;
+}
+
+
 
 /****MAIN-PRODUCTO****/
 
@@ -239,8 +248,8 @@ aside{
 
 .pBOTON {
     background: #fff; /* color de fondo */
-    color: #4741d7; /* color de fuente */
-    border: 2px solid #4741d7; /* tamaño y color de borde */
+    color: #f99282; /* color de fuente */
+    border: 2px solid #f99282; /* tamaño y color de borde */
     padding: 16px 20px;
     border-radius: 3px; /* redondear bordes */
     position: relative;
@@ -253,7 +262,7 @@ aside{
   }
   .pBOTON::after {
     content: "";
-    background: #4741d7; /* color de fondo hover */
+    background: #f99282; /* color de fondo hover */
     position: absolute;
     z-index: -1;
     padding: 16px 20px;
@@ -309,13 +318,14 @@ h1{
     align-items: center;
     padding: 1.3em;
     background-color: #d0ab7a;
-    font-size: 1.2em;
-    border: 1.2px solid #78451a;
+    border: 1.2px solid #623307;
     margin: 2.5em;
     margin-top: 2.3em
 }
 
-
+.main_nosotros p{
+    color: #623307;
+}
 
 .main_nosotros2 {
     justify-content: space-around;
@@ -479,14 +489,44 @@ a{
     }
 
     /*header*/
+    
+    .pHeader{
+        color: #ffffff;
+        text-align: center;
+        font-size: 12px;
+    }
 
     .imgheader{
         width: 50px;
         height: 40px;
     }
 
-    .pHeader{
-        font-size:15px;
+    /*index*/
+    #divCentradoIndex{
+        display: grid;
+        grid-template-columns: repeat(1,245px);
+        grid-template-rows: repeat(1,460px);
+        column-gap: 50px;
+        margin: 30px;
+    }
+
+    #mainIndex{    
+        height: 1200px;
+        width: auto;
+    }
+
+    #divPresentacion{
+        height: 1180px;
+
+    }
+
+
+    #divPresentacion h1{
+        font-size: 25px;
+    }
+
+    .pBOTON{
+        height: 20px;
     }
 
     /*productos*/
@@ -526,13 +566,39 @@ a{
         font-size: 18px;
     }
 
+    /*nosotros*/
+    #mainNosotros{
+        height: auto;
+        padding-bottom: 60px;
+    }
+    
+    .main_nosotros {
+        justify-content: space-around;
+        align-items: center;
+        padding: 1.3em;
+        background-color: #d0ab7a;
+        border: 1.2px solid #623307;
+        margin: 2.5em;
+        margin-top: 2.3em
+    }
+    
+    .main_nosotros p{
+        color: #623307;
+        font-size: 14px;
+    }
+    
+    .main_nosotros2 {
+        font-size: 16px;    
+    }
+
+
     /********MAIN-CONTACTO********/
 
     #mainContacto{
         height: 780px;
     }
 
-    #mainContacto h3{
+    h3{
         font-size: 27px;
     }
     
@@ -569,14 +635,11 @@ a{
 
     }
     
-
-    
-    .pFooter , .pHeader{
+    .pFooter{
         color: #ffffff;
         text-align: center;
         font-size: 15px;
     }
-    
 
     .divFooter{
         width:auto;
@@ -589,6 +652,7 @@ a{
 
 @media screen and (min-width:768px) and (max-width:1040px) {
     /**NOSOTROS.HTML**/
+   
     
     /**PRODUCTOS.HTML**/
     #mainProductos{    
@@ -620,6 +684,10 @@ a{
     }
 
     /**MAIN-CONTACTO**/
+
+    #mainContacto{
+        height: 800px;
+    }
 
     .formContacto label{
         font-size: 17px;
