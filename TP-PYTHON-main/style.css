@@ -1,8 +1,8 @@
-
 *{
     padding: 0px;
     margin: 0px;
 }
+
 
 .miniImgs{
     height: 100px;
@@ -10,14 +10,7 @@
 }
 
 body{
-    background-color:#eb6f8e;  
-}
-
-.body-ingresar{
-    background-color: #ffffff;
-    background-image: url(./Imagenes/fondos/wallpaper_ingresar.png);
-    background-repeat: no-repeat;
-    background-size:cover;
+    background-color:#eaccad;  
 }
 
 
@@ -26,7 +19,7 @@ p, .pBOTON , .aCompra{
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: #ffffff;
+    color: #1a1919;
 }
 /*******ICONOS******/
 .iconoX{
@@ -49,15 +42,9 @@ nav{
 .divCarrito{
     display: flex;
     font-size: 50px;
-    color: #4967ca;
+    color: #75451b;
     justify-content: center;
     width: 150px;
-}
-
-
-
-.nombrePag{
-    width: 200px;
 }
 
 .iconoInicio{
@@ -65,9 +52,6 @@ nav{
     margin-left: 40px;
 }
 
-.imgCarrito{
-    width: 80px;
-}
 
 #barraSuperior{
     display: flex;
@@ -82,7 +66,7 @@ nav{
     color: rgb(14, 14, 59);
     --s: 0.1em;   /* the thickness of the line */
      --c: #623307; /* the color */  
-    color: rgba(255, 0, 0, 0);
+    color: #0000;
     padding-bottom: var(--s);
     background: 
         linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
@@ -116,8 +100,6 @@ header{
 }
 
 /****ASIDE*******/
-
-
 h2{
     text-align: center;
 }
@@ -126,9 +108,11 @@ h2{
 #mainIndex{
     padding-top: 80px;
     width:auto ;
-    display: flex;;
-    align-items: flex-start;
-    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    height: 1800px;
     background-color:#ffedba;
     background-size: cover;
     background-repeat: no-repeat;
@@ -136,12 +120,22 @@ h2{
 
 #divPresentacion{
     margin-left: 100px;
-    height: 400px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+#imgCarrusel{
+    width:fit-content;
+}
+
+.div-consultas{
+    border: 2px solid #75451b;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;}
 
 /****MAIN-PRODUCTO****/
 
@@ -240,33 +234,9 @@ aside{
 }
 
 
-/****MAIN-INGRESAR****/
-#mainIngresar{
-    width:auto ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    margin-top: 15px;
-}
-
-.wallIngresar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 800px;
-    height: 450px;
-}
+/********/
 
 
-/*.pBOTON{
-    color: #1f1e1e;
-    background-color:#eb6f8e;
-    font-family: 'Nunito', sans-serif;
-    font-size: 28px;
-    font-weight: bold;   
-}*/
 .pBOTON {
     background: #fff; /* color de fondo */
     color: #4741d7; /* color de fuente */
@@ -323,9 +293,7 @@ h1{
 }
 
 /********MAIN-NOSOTROS********/
-
-
-.container_nosotros {
+#mainNosotros{
     justify-content:space-around ;
     align-items: center;
     align-content: center;
@@ -347,13 +315,6 @@ h1{
     margin-top: 2.3em
 }
 
-.h3_nosotros{
-    color: #6d3c11;
-    border:2px solid #1f1e1e;
-    padding: 0.15em;  
-    border-radius: 5px;
-    background-color: #eaccad;
-}
 
 
 .main_nosotros2 {
@@ -399,6 +360,7 @@ h1{
 
 .divContacto p{
     font-size: 20px;
+    color: white;
 }
 
 .formContacto form div{
@@ -450,6 +412,7 @@ h1{
 }
 
 
+
 /********FOOTER********/
 footer{
     height: 200px;
@@ -475,67 +438,98 @@ a{
     text-decoration: none;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    
-    p{
-        font-size: 15.5px;
+
+
+
+
+/********************MEDIA QUERYES********/
+
+/**PRODUCTOS.HTML**/
+
+@media screen and (min-width:320px)  and (max-width:767px){
+
+    /*nav*/
+    nav{
+        display: flex;
+        justify-content: space-around; 
+        padding-bottom: 15px; 
+        height: 100px;    
     }
 
-    nav, header{
-        height: 110px;
+    #barraSuperior{
+        gap: 10px;
+        width: 320px;
     }
-    
+
     .iconoInicio{
-        width: 80px;
-        margin-left: 32px;
+        width: 50px;
+        margin-left: 0px;
+        display: flex;  
+    }
+    .divCarrito{
+        font-size: 40px;
+        width: 55px;
     }
 
-    .aMenu{
-        font-size: 35px;
+    #barraSuperior{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
     }
 
-
-    /********MAIN-CONTACTO********/
-    
-    .formContacto label, .divContacto p{
-        font-size: 17px;
-    }
-
-}
-
-@media screen and (min-width: 320px) and (max-width: 768px) {
-
-    p{
-        font-size: 8px;
-    }
-
-    nav, header{
-        height: 80px;
-    }
-    
-    .iconoInicio{
-        width: 60px;
-        margin-left: 12px;
-    }
-
-    .imgCarrito{
-        width: 60px;
-    }
+    /*header*/
 
     .imgheader{
-        width: 30px;
-        height: 27px;
+        width: 50px;
+        height: 40px;
+    }
+
+    .pHeader{
+        font-size:15px;
+    }
+
+    /*productos*/
+
+    body{
+        width: auto;
+    }
+
+    
+    .iconoInicio{
+        width: 50px;
     }
 
     .aMenu{
-        font-size: 15px;
+        font-size: 16px;
     }
 
+    
+    #mainProductos{    
+        height: 6000px;
+        width: auto;
+    }
+
+    #divCentrado{
+        display: grid;
+        grid-template-columns: repeat(1,245px);
+        grid-template-rows: repeat(12,500px);
+        column-gap: 50px;
+        
+    }
+
+    .imgProducto{
+        width: 241px;
+    }
+
+    p{
+        font-size: 18px;
+    }
 
     /********MAIN-CONTACTO********/
 
     #mainContacto{
-        height: 750px;
+        height: 780px;
     }
 
     #mainContacto h3{
@@ -556,6 +550,7 @@ a{
         background-color: #6d3c11;
         padding: 5%;
     }
+
     
     .formContacto label, .divContacto p, .formContacto div input,
     .formContacto textarea, #error{
@@ -565,5 +560,69 @@ a{
     .formContacto form div{
         padding: 1px;
     }
+
+    /*footer*/
+    footer{
+        width: auto;
+        margin-right: 0px;
+        padding-right: 0px;
+
+    }
     
+
+    
+    .pFooter , .pHeader{
+        color: #ffffff;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+
+    .divFooter{
+        width:auto;
+
+    }
 }
+
+
+
+
+@media screen and (min-width:768px) and (max-width:1040px) {
+    /**NOSOTROS.HTML**/
+    
+    /**PRODUCTOS.HTML**/
+    #mainProductos{    
+        height: 3000px;
+    }
+
+    #divCentrado{
+        display: grid;
+        grid-template-columns: repeat(2,255px);
+        grid-template-rows: repeat(6,500px);
+        column-gap: 50px;
+    }
+
+    p{
+        font-size: 15.5px;
+    }
+
+    nav{
+        height: 110px;
+    }
+
+    .iconoInicio{
+        width: 80px;
+        margin-left: 32px;
+    }
+
+    .aMenu{
+        font-size: 35px;
+    }
+
+    /**MAIN-CONTACTO**/
+
+    .formContacto label{
+        font-size: 17px;
+    }
+}
+
