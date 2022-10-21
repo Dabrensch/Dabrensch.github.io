@@ -7,7 +7,7 @@ Profesor: Anderson Ocaña
 Integrantes:
 - Brenda Schereik
 - Luisina Barrera Hernández
-- Tamara
+- Tamara Cortes
 
 Repositorio en GitHub: https://github.com/Dabrensch/dabrensch.github.io
 
