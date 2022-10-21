@@ -14,16 +14,17 @@ body{
 }
 
 
-p, .pBOTON , .aCompra{
+p, .pBOTON , .aCompra, span, .city-temp, sup {
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     color: #1a1919;
+    text-decoration: none;
 }
 /*******ICONOS******/
 .iconoX{
-  font-size: 20px;
+    font-size: 20px;
 }
 
 
@@ -145,7 +146,6 @@ h2{
 }
 
 
-
 /****MAIN-PRODUCTO****/
 
 #mainProductos{    
@@ -217,7 +217,6 @@ aside{
 }
 
 .aCompra{
-    
     border: none;
     color: white;
     padding: 16px 40px;
@@ -256,11 +255,13 @@ aside{
     z-index: 1;
     overflow: hidden;
     display: inline-block;
-  }
-  .pBOTON:hover {
+}
+
+.pBOTON:hover {
     color: #fff;/* color de fuente hover */
-  }
-  .pBOTON::after {
+}
+
+.pBOTON::after {
     content: "";
     background: #f99282; /* color de fondo hover */
     position: absolute;
@@ -273,12 +274,14 @@ aside{
     bottom: 0;
     transform: skewX(45deg) scale(0, 1);
     transition: all 0.3s ease;
-  }
-  .pBOTON:hover::after {
+}
+
+.pBOTON:hover::after {
     transition: all 0.3s ease-out;
     transform: skewX(45deg) scale(1, 1);
-  }
+}
 /**/
+
 h3{
     color: #2c2929;
     font-family: 'Nunito', sans-serif;
@@ -311,7 +314,7 @@ h1{
     width: auto;
     height: 65vh;
     font-family: 'Nunito', sans-serif
-    }
+}
 
 .main_nosotros {
     justify-content: space-around;
@@ -446,8 +449,190 @@ footer{
 
 a{
     text-decoration: none;
+    color: #ffffff;
+
 }
 
+/********CLIMA********/
+
+#mainClima{
+    background-color: #f99282;
+    height: auto;
+    min-height: 400px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+
+:root{
+    --bg_main: #0a1f44;
+    --text_light: #fff;
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --red: #ff1e42;
+    --darkred: #c3112d;
+    --orange: #ff8c00;
+}
+  
+button{
+    cursor: pointer;
+}
+   
+
+button, input{
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+}
+  
+#mainClima img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure{
+    align-items: center;
+    text-align: center;
+}
+  
+ul{
+    list-style: none;
+}
+  
+.container{
+    width: 90%;
+    max-width: 1200px;
+    padding: 15px;
+}
+  
+  
+/* SECTION #1
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.top-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--text_light);
+}
+  
+.heading {
+    font-weight: bold;
+    font-size: 3rem;
+    letter-spacing: 0.02em;
+    padding: 0 0 30px 0;
+}
+  
+.top-banner form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+  
+.top-banner form input {
+    font-size: 2rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border-bottom: 1px solid;
+}
+  
+.top-banner form input::placeholder {
+    color: currentColor; 
+}
+  
+.top-banner form button {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 15px 15px;
+    border-radius: 5px;
+    background: var(--red);
+    transition: background 0.3s ease-in-out;
+}
+  
+.top-banner form button:hover {
+    background: var(--darkred);
+}
+
+.top-banner form .msg {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    max-width: 450px;
+    min-height: 40px;
+    font-size: 1.4rem;
+}
+  
+  
+/* SECTION #2
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.ajax-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0 20px;
+}
+  
+.ajax-section .cities {
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+  
+.ajax-section .city {
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--text_light);
+    color: var(--text_med);
+}
+  
+.ajax-section .city::after {
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 20px;
+    background: var(--text_light);
+}
+  
+.ajax-section figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+  
+.ajax-section .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text_dark);
+}
+  
+.ajax-section .city sup {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.5em;
+}
+  
+.ajax-section .city-name sup {
+    font-family: 'Nunito', sans-serif;
+    padding: 0.2em 0.6em;
+    border-radius: 30px;
+    color: var(--text_light);
+    background: var(--orange);
+}
+  
+.ajax-section .city-icon {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+  
 
 
 
@@ -635,17 +820,57 @@ a{
 
     }
     
-    .pFooter{
+    .pFooter, a{
         color: #ffffff;
         text-align: center;
         font-size: 15px;
+        text-decoration: none;
     }
 
     .divFooter{
         width:auto;
+    }
 
+    /**MAIN-CLIMA**/
+    .ajax-section .cities {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 12% 0 12%;
+    }
+
+
+    .top-banner form {
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    .heading{
+        font-size: 15px;
+    }
+
+
+    .top-banner form input {
+        font-size: 1.4rem;
+        height: 30px;
+        padding: 5px 5px 4px;
+        border-bottom: 1px solid;
+    }
+      
+    .top-banner form button {
+        font-size: 0.8rem;
+    }
+
+    .top-banner form .msg {
+        position:relative;
+        bottom: 0px;
+        font-size: 1rem;
+    }
+
+
+    .ajax-section {
+        margin: 0;
     }
 }
+
 
 
 
@@ -692,5 +917,15 @@ a{
     .formContacto label{
         font-size: 17px;
     }
-}
 
+    /**MAIN-CLIMA**/
+    .ajax-section .cities {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10%;
+        margin: 0 5% 0 5%;
+    }
+    
+    .heading{
+        font-size: 2.7rem;
+    }
+}
