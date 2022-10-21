@@ -96,7 +96,10 @@ function Envio(){
 				ban=1;
 			}
 			if(ban==0)
+			{
 				parrafo+='<br>Envio del formulario exitoso';
+				formulario.reset();
+			}
 			error.innerHTML= parrafo;
 		}	
 
